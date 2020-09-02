@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: webhttpd-cert
+  namespace: webhttpd
+spec:
+  commonName: testhttpd.k8s ## Change common name
+  secretName: webhttpd-cert
+  dnsNames:
+    - testhttpd.k8s ## Change dns names
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer

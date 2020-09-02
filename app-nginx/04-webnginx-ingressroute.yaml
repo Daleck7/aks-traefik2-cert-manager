@@ -1,0 +1,24 @@
+# Create an ingress route for Traefik2.
+# Change the "Host" parameter to fit your environnement
+
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingressroute
+  namespace: webnginx
+spec:
+  entryPoints:
+    - web
+    - websecure
+  routes:
+    - match: Host(`testnginx.k8s`) ## Change "Host" URL
+      kind: Rule
+      services:
+        - name: nginx
+          port: 80
+  tls:
+    secretName: webnginx-cert
+    passthrough: false
+    options:
+      name: tlsoptions
+      namespace: webnginx

@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: webnginx-cert
+  namespace: webnginx
+spec:
+  commonName: testnginx.k8s ## Change common name
+  secretName: webnginx-cert
+  dnsNames:
+    - testnginx.k8s ## Change dns names
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
