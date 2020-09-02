@@ -1,4 +1,4 @@
-# AKS + Traefikv2 + Cert-Manager
+# AKS + Traefik v2 + Cert-Manager
 
 ## Requirements 
 
