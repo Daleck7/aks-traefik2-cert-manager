@@ -20,3 +20,16 @@ az aks create -g MyResourceGroup -n MyClusterName \
 ```
 kubectl apply -f ./traefik
 ```
+
+## Deploy Cert-Manager 1.0
+
+Installing manifests
+```
+kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.0.1/cert-manager.yaml
+
+```
+
+Apply Let's Encrypt Cluster Issuer
+```
+kubectl apply -f ./cert-manager
+```
