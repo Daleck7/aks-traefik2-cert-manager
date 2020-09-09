@@ -14,3 +14,9 @@ az aks create -g MyResourceGroup -n MyClusterName \
 --node-count 2 \
 --node-vm-size Standard_D2s_v3
 ```
+
+## Deploy Traefik v2.2
+
+```
+kubectl apply -f ./traefik
+```
