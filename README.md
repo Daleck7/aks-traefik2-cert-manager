@@ -3,7 +3,7 @@
 ## Requirements 
 
 - Azure Kuberetes Services 1.17.x
-- Traefik v2.2
+- Traefik v2
 - Cert-Manager v1.0
 
 ## Deploy Azure Kubernetes Cluster
