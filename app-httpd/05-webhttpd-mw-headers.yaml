@@ -1,0 +1,14 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+    name: headers
+    namespace: webhttpd
+spec:
+    headers:
+        forceSTSHeader: true
+        stsSeconds: 315360000
+        stsIncludeSubdomains: true
+        stsPreload: false
+        sslRedirect: false
+        browserXssFilter: true
+        contentTypeNosniff: true

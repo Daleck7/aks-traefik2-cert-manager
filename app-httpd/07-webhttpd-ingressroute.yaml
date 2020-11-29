@@ -13,6 +13,8 @@ spec:
   routes:
     - match: Host(`testhttpd.k8s`) ## Change "Host" URL
       kind: Rule
+      middlewares:
+        - name: main
       services:
         - name: httpd
           port: 80

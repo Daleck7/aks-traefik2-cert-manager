@@ -1,0 +1,10 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+    name: main
+    namespace: webhttpd
+spec:
+    chain:
+        middlewares:
+            - name: strip-prefix
+            - name: headers
